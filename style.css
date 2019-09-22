@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --pink-color: #ff1943;
+    --fair-grey: #f4f4f4;
+    --dark-grey: #5a5a5a;
+    --dark-color: #2b2b2b;
+    --white-color: #ffffff;
+    --black-color: #000000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.col-1 {
+    flex: 8.333%;
+    max-width: 8.333%;
+}
+.col-2 {
+    flex: 16.667%;
+    max-width: 16.667%;
+}
+.col-3 {
+    flex: 25%;
+    max-width: 25%;
+}
+.col-4 {
+    flex: 33.333%;
+    max-width: 33.333%;
+}
+.col-5 {
+    flex: 41.667%;
+    max-width: 41.667%;
+}
+.col-6 {
+    flex: 50%;
+    max-width: 50%;
+}
+.col-7 {
+    flex: 58.333%;
+    max-width: 58.333%;
+}
+.col-8 {
+    flex: 66.667%;
+    max-width: 66.667%;
+}
+.col-9 {
+    flex: 75%;
+    max-width: 75%;
+}
+.col-10 {
+    flex: 83.333%;
+    max-width: 83.333%;
+}
+.col-11 {
+    flex: 91.667%;
+    max-width: 91.667%;
+}
+.col-12 {
+    flex: 100%;
+    max-width: 100%;
+}
+
+.col-offset-0 {margin-left: 0;}
+.col-offset-1 {margin-left: 8.33%;}
+.col-offset-2 {margin-left: 16.66%;}
+.col-offset-3 {margin-left: 25%;}
+.col-offset-4 {margin-left: 33.33%;}
+.col-offset-5 {margin-left: 41.66%;}
+.col-offset-6 {margin-left: 50%;}
+.col-offset-7 {margin-left: 58.33%;}
+.col-offset-8 {margin-left: 66.66%;}
+.col-offset-9 {margin-left: 75%;}
+.col-offset-10 {margin-left: 83.33%;}
+.col-offset-11 {margin-left: 91.66%;}
+
+nav , footer {
+    background-color:var(--pink-color);
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+}
+
+nav ul {
+    list-style-type: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 10vh;
+    padding: 0 2vw;
+    color: var(--black-color);
+    cursor: pointer;
+}
+
+nav img {
+    max-height: 8vh;
+    width: auto;
+    margin-top: 1vh;
+}
+
+nav:before, nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav ul li:hover {
+    background-color: var(--white-color);
+    transition-duration: 0.7s;
+}
+
+nav h1 {
+    list-style-type: none;
+    position: absolute;
+    padding: 0;
+    margin: -8vh 16vh;
+    font-size: 5vh;
+    font-style: italic;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://cdn.pixabay.com/photo/2012/06/19/10/32/owl-50267__340.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+header a {
+    color: var(--pink-color);
+    background-color:var(--black-color);
+    transition: background-color 0.3s linear, color 0.3s linear;
+
+}
+header>div>div {
+    display: block;
+    position: absolute;
+    top: 40%;
+    margin-left: -100%;
+    padding: 40px;
+    background-color: rgba(255, 25, 67, 0.6);
+    text-align: center;
+    transition: margin-left .7s ease-out;
+}
+
+header:hover>div>div {
+    margin-left: 0;
+}
+
+header h1 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header a {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+    text-align: center;
+    width: 120px;
+    font-size: 1.4em;
+    font-weight: 500;
+    padding: 8px 12px;
+    text-decoration: none;
+    box-shadow: 0 0 7px #555;
+    cursor: pointer;
+}
+
+header a:hover {
+    color: var(--black-color);
+    background-color: var(--white-color);
+}
+
+.text h2 {
+    margin: 3vh 0 ;
+    line-height: 5vh;
+    text-align: left;
+}
+
+.text p {
+    margin-top: 4vh;
+    text-align: justify;
+}
+
+footer p {
+    margin: auto;
+    text-align: center;
+    line-height: 10vh;
+    color: var(--black-color);
+}
+
+main {
+    margin-top: 20px;
+    padding: 5%;
+    min-height: 20vh;
+    text-align: justify;
+}
+
+.gallery:before, .gallery:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.gallery {
+    margin: 5vh auto;
+}
+
+.photo {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    padding-top: 0vh;
+}
+
+.photo:last-of-type {
+    margin-right: 0;
+}
+
+.map {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 4vh;
+}
+
+@media (max-width: 1200px) {
+
+    .container {
+        width: 100%;
+    }
+
+    .photos {
+        margin-right: 2%;
+        width: 32%;
+    }
+
+    .photo {
+        margin-right: 2%;
+        width: 32%;
+    }
+
+    .photo:last-of-type {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 100%;
+    }
+
+    nav {
+        height: auto;
+        text-align: center;
+    }
+
+    nav ul {
+        float: none;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav img {
+        max-height: 15vh;
+        margin-right: 41vh;
+    }
+
+    nav h1 {
+        display: inline-flex;
+        margin: -51vh -6vh;
+    }
+
+    header {
+        margin-top: 0;
+        background-image: url("https://cdn.pixabay.com/photo/2012/06/19/10/32/owl-50267__340.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    header>div>div {
+        width: 100%;
+        margin-left: auto;
+        padding-bottom: 2vh;
+        top: 55%;
+    }
+
+    header a {
+        margin: 20px auto 0 auto;
+        display: block;
+        width: 150px;
+    }
+
+    .text h2 {
+        padding: 8%;
+    }
+
+    .text p {
+        text-align: justify;
+        padding: 8%;
+        font-size: 1em;
+    }
+
+    .gallery {
+        padding: 0 4vh 0 4vh;
+    }
+
+    .photo {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .map {
+        width: 100%;
+    }
+}
